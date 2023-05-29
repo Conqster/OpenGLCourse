@@ -12,25 +12,27 @@ GLuint VAO, VBO, shader;
 // Vertex Shader
 static const char* vShader =
 "																		\n\
-#version 330															\n\
+#version 430 core														\n\
 																		\n\
 layout (location = 0) in vec3 pos;										\n\
 																		\n\
 void main()																\n\
 {																		\n\
-	gl_Position = vec4(0.4 * pos.x, 0.4 * pos.y, 0.4 * pos.z, 1.0);		\n\																	\n\
+	gl_Position = vec4(0.4 * pos.x, 0.4 * pos.y,pos.z, 1.0);		   \n\
+}																		\n\
 ";
 
 //Fragment Shader
 static const char* fShader =
 "																		\n\
-#version 330															\n\
+#version 430 core														\n\
 																		\n\
 out vec4 colour;														\n\
 																		\n\
 void main()																\n\
 {																		\n\
-	colour = vec4(1.0, 0.0, 0.0, 1.0);									\n\																	\n\
+	colour = vec4(1.0, 1.0, 0.0, 1.0);									\n\
+}																		\n\
 ";
 
 
@@ -42,6 +44,13 @@ void CreateTriangle()
 		1.0f, -1.0f, 0.0f,
 		0.0f, 1.0f, 0.0f
 	};
+
+	/*GLfloat vertices[] =
+	{
+		0.0f, -1.0f, 0.0f,
+		1.0f, -1.0f, 0.0f,
+		0.5f, 0.0f, 0.0f
+	};*/
 
 	glGenVertexArrays(1, &VAO);
 	glBindVertexArray(VAO);
@@ -59,6 +68,8 @@ void CreateTriangle()
 
 }
 
+
+
 void ADDShader(GLuint theProgram, const char* shaderCode, GLenum shaderType)
 {
 	GLuint theShader = glCreateShader(shaderType);
@@ -75,7 +86,7 @@ void ADDShader(GLuint theProgram, const char* shaderCode, GLenum shaderType)
 	GLint result = 0;
 	GLchar eLog[1024] = { 0 };
 
-	glGetProgramiv(shader, GL_COMPILE_STATUS, &result);
+	glGetShaderiv(theShader, GL_COMPILE_STATUS, &result);
 
 	if (!result)
 	{
@@ -124,6 +135,8 @@ void CompileShaders()
 	}
 
 }
+
+
 
 int main()
 {
@@ -174,6 +187,9 @@ int main()
 	//Setup Viewport size
 	glViewport(0, 0, bufferWidth, bufferHeight);
 
+	CreateTriangle();
+	CompileShaders();
+
 	//Loop until window closed
 	while (!glfwWindowShouldClose(mainWindow))
 	{
@@ -183,6 +199,14 @@ int main()
 		//Clear window
 		glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
+
+		glUseProgram(shader);
+
+		glBindVertexArray(VAO);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glBindVertexArray(0);
+
+		glUseProgram(0);
 
 		glfwSwapBuffers(mainWindow);
 	}
