@@ -13,6 +13,7 @@
 #include "Mesh.h"
 #include "Shader.h"
 #include "Window.h"
+#include "Camera.h"
 
 
 const float toRadians = 3.14159265f / 180.0f;
@@ -20,6 +21,10 @@ const float toRadians = 3.14159265f / 180.0f;
 Window mainWindow;
 std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
+Camera camera;
+
+GLfloat deltaTime = 0.0f;
+GLfloat lastTime = 0.0f;
 
 
 // Vertex Shader
@@ -74,18 +79,27 @@ int main()
 	CreateObjects();
 	CreateShaders();
 
+	camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -90.0f, 0.0f, 5.0f, 0.1f);
+
 
 	GLuint uniformProjection = 0;
 	GLuint uniformModel = 0;
+	GLuint uniformView = 0;
 	//45 degrees FOV on the y top to buttom NOT LEFT TO RIGHT
 	glm::mat4 projection = glm::perspective(45.0f, mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.0f);
 
 	//Loop until window closed
 	while (!mainWindow.getShouldClose())
 	{
+		GLfloat now = glfwGetTime();
+		deltaTime = now - lastTime;
+		lastTime = now;
+
 		//Get + Handle user input events
 		glfwPollEvents();
 
+		camera.keyControl(mainWindow.getsKeys(), deltaTime);
+		camera.mouseControl(mainWindow.getXChange(), mainWindow.getYChange());
 
 		//Clear window
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -94,6 +108,7 @@ int main()
 		shaderList[0].UseShader();
 		uniformModel = shaderList[0].GetModelLocation();
 		uniformProjection = shaderList[0].GetProjectionLocation();
+		uniformView = shaderList[0].GetViewLocation();
 
 		glm::mat4 model(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, -2.5f));
@@ -101,6 +116,7 @@ int main()
 		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+		glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(camera.calculateViewMatrix()));
 		meshList[0]->RenderMesh();
 
 		model = glm::mat4(1.0f);
