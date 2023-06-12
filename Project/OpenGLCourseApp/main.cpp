@@ -1,3 +1,5 @@
+#define STB_IMAGE_IMPLEMENTATION
+
 #include <stdio.h>
 #include <string.h>
 #include <cmath>
@@ -14,6 +16,7 @@
 #include "Shader.h"
 #include "Window.h"
 #include "Camera.h"
+#include "Texture.h"
 
 
 const float toRadians = 3.14159265f / 180.0f;
@@ -22,6 +25,9 @@ Window mainWindow;
 std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
 Camera camera;
+
+Texture brickTexture;
+Texture dirtTexture;
 
 GLfloat deltaTime = 0.0f;
 GLfloat lastTime = 0.0f;
@@ -80,6 +86,9 @@ int main()
 	CreateShaders();
 
 	camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -90.0f, 0.0f, 5.0f, 0.1f);
+
+	brickTexture = Texture("Textures/brick.png");
+
 
 
 	GLuint uniformProjection = 0;
