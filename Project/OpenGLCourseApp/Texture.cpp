@@ -13,7 +13,7 @@ Texture::Texture()
 }
 
 
-Texture::Texture(char* fileLoc)
+Texture::Texture(const char* fileLoc)
 {
 	textureID = 0;
 	width = 0;
@@ -67,5 +67,5 @@ void Texture::ClearTexture()
 
 Texture::~Texture()
 {
-
+	ClearTexture();
 }
