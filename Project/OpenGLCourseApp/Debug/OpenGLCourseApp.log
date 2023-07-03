@@ -1,9 +1,20 @@
 ﻿  main.cpp
 C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Window.h(17,10): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
 C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Window.h(22,10): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(171,15): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(195,33): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(195,8): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(194,47): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(194,22): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(186,15): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(213,33): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(213,8): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(212,47): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(212,22): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
+  PointLight.cpp
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\PointLight.cpp(23,14): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\PointLight.cpp(24,14): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\PointLight.cpp(25,14): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\PointLight.cpp(28,14): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\PointLight.cpp(29,14): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\PointLight.cpp(30,14): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\PointLight.cpp(31,14): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+  Shader.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   OpenGLCourseApp.vcxproj -> C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Debug\OpenGLCourseApp.exe
