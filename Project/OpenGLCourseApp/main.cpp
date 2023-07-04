@@ -154,6 +154,8 @@ int main()
 
 	shinyMaterial = Material(1.0f, 32.f);
 	dullMaterial = Material(0.3f, 4.f);
+	
+	
 
 	mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
 								0.1f, 0.3f,
@@ -170,10 +172,6 @@ int main()
 	GLuint uniformModel = 0;
 	GLuint uniformView = 0;
 	GLuint uniformEyePosition = 0;
-	GLuint uniformAmbientIntensity = 0;
-	GLuint uniformAmbientColour = 0;
-	GLuint uniformDirection = 0;
-	GLuint uniformDiffuseintensity = 0;
 	GLuint uniformSpecularIntensity = 0;
 	GLuint uniformShininess = 0;
 
@@ -201,16 +199,15 @@ int main()
 		uniformModel = shaderList[0].GetModelLocation();
 		uniformProjection = shaderList[0].GetProjectionLocation();
 		uniformView = shaderList[0].GetViewLocation();
-		uniformAmbientColour = shaderList[0].GetAmbientColourLocation();
-		uniformAmbientIntensity = shaderList[0].GetAmbientIntensityLocation();
-		uniformDirection = shaderList[0].GetDirectionLocation();
-		uniformDiffuseintensity = shaderList[0].GetDiffuseIntensityLocation();
 		uniformEyePosition = shaderList[0].GetEyePositionLocation();
 		uniformSpecularIntensity = shaderList[0].GetSpecularIntensityLocation();
 		uniformShininess = shaderList[0].GetShininessLocation();
 
-		mainLight.UseLight(uniformAmbientIntensity, uniformAmbientColour,
-							uniformDiffuseintensity, uniformDirection);
+
+		shaderList[0].SetDirectionalLight(&mainLight);
+
+		//mainLight.UseLight(uniformAmbientIntensity, uniformAmbientColour,
+		//					uniformDiffuseintensity, uniformDirection);
 
 		glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(camera.calculateViewMatrix()));

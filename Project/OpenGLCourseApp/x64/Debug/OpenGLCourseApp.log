@@ -1,4 +1,10 @@
-﻿main.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function "public: bool __cdecl Window::getShouldClose(void)" (?getShouldClose@Window@@QEAA_NXZ)
+﻿DirectionalLight.obj : error LNK2019: unresolved external symbol __imp___glewUniform1f referenced in function "public: void __cdecl DirectionalLight::UseLight(float,float,float,float)" (?UseLight@DirectionalLight@@QEAAXMMMM@Z)
+Material.obj : error LNK2001: unresolved external symbol __imp___glewUniform1f
+PointLight.obj : error LNK2001: unresolved external symbol __imp___glewUniform1f
+DirectionalLight.obj : error LNK2019: unresolved external symbol __imp___glewUniform3f referenced in function "public: void __cdecl DirectionalLight::UseLight(float,float,float,float)" (?UseLight@DirectionalLight@@QEAAXMMMM@Z)
+main.obj : error LNK2001: unresolved external symbol __imp___glewUniform3f
+PointLight.obj : error LNK2001: unresolved external symbol __imp___glewUniform3f
+main.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function "public: bool __cdecl Window::getShouldClose(void)" (?getShouldClose@Window@@QEAA_NXZ)
 main.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function main
 main.obj : error LNK2019: unresolved external symbol glfwGetTime referenced in function main
 main.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function "public: void __cdecl Window::swapBuffers(void)" (?swapBuffers@Window@@QEAAXXZ)
@@ -47,4 +53,4 @@ Window.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent re
 Window.obj : error LNK2019: unresolved external symbol __imp_glewExperimental referenced in function "public: int __cdecl Window::Initialise(void)" (?Initialise@Window@@QEAAHXZ)
 C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\\..\..\External Libs\GLEW\lib\Release\Win32\glew32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
 C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\\..\..\External Libs\GLFW\lib-vc2022\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\x64\Debug\OpenGLCourseApp.exe : fatal error LNK1120: 46 unresolved externals
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\x64\Debug\OpenGLCourseApp.exe : fatal error LNK1120: 48 unresolved externals
