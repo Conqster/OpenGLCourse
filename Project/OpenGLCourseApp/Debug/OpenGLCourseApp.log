@@ -1,5 +1,5 @@
 ﻿  main.cpp
 C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Window.h(17,10): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
 C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Window.h(22,10): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(184,15): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(232,15): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
   OpenGLCourseApp.vcxproj -> C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Debug\OpenGLCourseApp.exe
