@@ -49,7 +49,8 @@ float xPos = -4.0f;
 float yPos = 2.0f;
 float zPos = 2.0f;
 
-//myVector rateOfChange()
+myVector rateOfChange = myVector::ZeroVector();
+
 
 #pragma endregion
 
@@ -197,8 +198,12 @@ int main()
 #pragma region Playing Around ref1
 
 	/*float xPos = */
-	myVector rateOfChange = myVector(2.0f, 1.0f, 0.0f);
-	float xPos = rateOfChange.X;
+	//myVector rateOfChange = myVector(2.0f, 1.0f, 0.0f);
+	//float xPos = rateOfChange.X;
+	rateOfChange = myVector::VectorOne();
+	std::cout << "My Value is X: " << rateOfChange.X 
+				<<", Y: " << rateOfChange.Y 
+				<<", Z: " << rateOfChange.Z << std::endl;
 
 #pragma endregion
 
