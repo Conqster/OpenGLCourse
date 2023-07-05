@@ -43,6 +43,17 @@ PointLight pointLights[MAX_POINT_LIGHTS];
 GLfloat deltaTime = 0.0f;
 GLfloat lastTime = 0.0f;
 
+#pragma region Playing Around ref1
+
+float xPos = -4.0f;
+float yPos = 2.0f;
+float zPos = 2.0f;
+
+//myVector rateOfChange()
+
+#pragma endregion
+
+
 
 // Vertex Shader
 static const char* vShader = "Shaders/shader.vert";
@@ -181,6 +192,16 @@ int main()
 
 	shinyMaterial = Material(4.0f, 256);
 	dullMaterial = Material(0.3f, 4.f);
+
+
+#pragma region Playing Around ref1
+
+	/*float xPos = */
+	myVector rateOfChange = myVector(2.0f, 1.0f, 0.0f);
+	float xPos = rateOfChange.X;
+
+#pragma endregion
+
 	
 	
 
@@ -204,7 +225,7 @@ int main()
 	pointLights[2] = PointLight(1.0f, 0.0f, 0.0f,
 								0.0f, 1.0f,
 								-4.0f, 2.0f, 2.0f,
-								1.0f, 0.07f, 0.017f);
+								1.0f, 0.09f, 0.032f);
 	pointLightCount++;
 
 
