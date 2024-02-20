@@ -1,4 +1,8 @@
 #include "Window.h"
+#include <iostream>
+
+const int FIX_MULTISCREEN_BUG = 0;
+
 Window::Window()
 {
 	width = 800;
@@ -46,7 +50,33 @@ int Window::Initialise()
 	//Allow forward Compatibility
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
+
+#if FIX_MULTISCREEN_BUG == 0
+
+	//GLFWmonitor* desiredMonitor = glfwGetPrimaryMonitor();
+	////GLFWwindow* window = glfwCreateWindow(width, height, "Default Window", desiredMonitor, NULL);
+
+	//printf("Bug called");
+
+	//int monitorCount;
+	//GLFWmonitor** monitors = glfwGetMonitors(&monitorCount);
+	//mainWindow = glfwCreateWindow(width, height, "Default Window", monitors[1], NULL);
+
+	//std::cout << "Number of Monitors: " << monitorCount << std::endl;
+	//std::cout << "Default Monitor is " << window << std::endl;
+
+	//for (int i = 0; i < monitorCount; i++)
+	//{
+	//	int widthMM, heigthMM;
+	//	glfwGetMonitorPhysicalSize(monitors[i], &widthMM, &heigthMM);
+	//}
+
+#endif // 0
+
 	mainWindow = glfwCreateWindow(width, height, "Test Window", NULL, NULL);
+
+
+
 	if (!mainWindow)
 	{
 		printf("GLFW window creation failed!");

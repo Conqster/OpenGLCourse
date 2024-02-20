@@ -1,1 +1,2 @@
 C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Debug\OpenGLCourseApp.exe
+C:\Users\okeja\Desktop\Personal Project\OpenGLCourse\Project\OpenGLCourseApp\Debug\OpenGLCourseApp.exe

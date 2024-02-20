@@ -1,0 +1,16 @@
+#ignore compiles object files
+/Project/OpenGLCourseApp/Debug/*.obj
+/Project/OpenGLCourseApp/x64/Debug/*.obj
+
+#ignore executables
+/Project/OpenGLCourseApp/Debug/*.exe
+
+#ignore log files
+/Project/OpenGLCourseApp/Debug/*.log
+/Project/OpenGLCourseApp/x64/Debug/*.log
+
+#ignore DLL files
+/Project/OpenGLCourseApp/.dll
+
+#ignore visual Studio settings
+/Project/OpenGLCourseApp/.vs

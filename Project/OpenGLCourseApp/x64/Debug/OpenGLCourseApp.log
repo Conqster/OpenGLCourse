@@ -1,43 +1,11 @@
-﻿  Light.cpp
-  Shader.cpp
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(106,38): warning C4477: 'snprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(106,38): message : consider using '%zd' in the format string
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(109,38): warning C4477: 'snprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(109,38): message : consider using '%zd' in the format string
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(112,38): warning C4477: 'snprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(112,38): message : consider using '%zd' in the format string
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(115,38): warning C4477: 'snprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(115,38): message : consider using '%zd' in the format string
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(118,38): warning C4477: 'snprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(118,38): message : consider using '%zd' in the format string
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(121,38): warning C4477: 'snprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(121,38): message : consider using '%zd' in the format string
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(124,38): warning C4477: 'snprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(124,38): message : consider using '%zd' in the format string
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(181,75): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(181,26): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(180,91): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(180,42): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(194,98): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(194,62): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(194,24): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(193,70): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(193,24): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(192,88): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(192,42): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Shader.cpp(224,36): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
-  main.cpp
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Window.h(17,10): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\Window.h(22,10): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(106,52): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\main.cpp(253,15): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-  Generating Code...
-DirectionalLight.obj : error LNK2019: unresolved external symbol __imp___glewUniform1f referenced in function "public: void __cdecl DirectionalLight::UseLight(float,float,float,float)" (?UseLight@DirectionalLight@@QEAAXMMMM@Z)
+﻿DirectionalLight.obj : error LNK2019: unresolved external symbol __imp___glewUniform1f referenced in function "public: void __cdecl DirectionalLight::UseLight(float,float,float,float)" (?UseLight@DirectionalLight@@QEAAXMMMM@Z)
 Material.obj : error LNK2001: unresolved external symbol __imp___glewUniform1f
 PointLight.obj : error LNK2001: unresolved external symbol __imp___glewUniform1f
+SpotLight.obj : error LNK2001: unresolved external symbol __imp___glewUniform1f
 DirectionalLight.obj : error LNK2019: unresolved external symbol __imp___glewUniform3f referenced in function "public: void __cdecl DirectionalLight::UseLight(float,float,float,float)" (?UseLight@DirectionalLight@@QEAAXMMMM@Z)
 main.obj : error LNK2001: unresolved external symbol __imp___glewUniform3f
 PointLight.obj : error LNK2001: unresolved external symbol __imp___glewUniform3f
+SpotLight.obj : error LNK2001: unresolved external symbol __imp___glewUniform3f
 main.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function "public: bool __cdecl Window::getShouldClose(void)" (?getShouldClose@Window@@QEAA_NXZ)
 main.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function main
 main.obj : error LNK2019: unresolved external symbol glfwGetTime referenced in function main
@@ -86,6 +54,6 @@ Window.obj : error LNK2019: unresolved external symbol glfwSetKeyCallback refere
 Window.obj : error LNK2019: unresolved external symbol glfwSetCursorPosCallback referenced in function "private: void __cdecl Window::createCallbacks(void)" (?createCallbacks@Window@@AEAAXXZ)
 Window.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent referenced in function "public: int __cdecl Window::Initialise(void)" (?Initialise@Window@@QEAAHXZ)
 Window.obj : error LNK2019: unresolved external symbol __imp_glewExperimental referenced in function "public: int __cdecl Window::Initialise(void)" (?Initialise@Window@@QEAAHXZ)
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\\..\..\External Libs\GLEW\lib\Release\Win32\glew32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\\..\..\External Libs\GLFW\lib-vc2022\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
-C:\Users\okeja\Desktop\Personal Projects\LearningOpenGL\Project\OpenGLCourseApp\x64\Debug\OpenGLCourseApp.exe : fatal error LNK1120: 49 unresolved externals
+C:\Users\okeja\Desktop\Personal Project\OpenGLCourse\Project\OpenGLCourseApp\\..\..\External Libs\GLEW\lib\Release\Win32\glew32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\okeja\Desktop\Personal Project\OpenGLCourse\Project\OpenGLCourseApp\\..\..\External Libs\GLFW\lib-vc2022\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\okeja\Desktop\Personal Project\OpenGLCourse\Project\OpenGLCourseApp\x64\Debug\OpenGLCourseApp.exe : fatal error LNK1120: 49 unresolved externals

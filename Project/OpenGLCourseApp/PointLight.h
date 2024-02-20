@@ -1,5 +1,8 @@
 #pragma once
 #include "Light.h"
+
+class Vec3;     //forward declare
+
 class PointLight : public Light
 {
 
@@ -29,6 +32,8 @@ public:
 	void UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation,
 		GLuint diffuseIntensityLocation, GLuint positionLocation,
 		GLuint constantLocation, GLuint linearLocation, GLuint exponentLocation);
+
+	void AddVelocity(glm::vec3 rate);
 
 	~PointLight();
 

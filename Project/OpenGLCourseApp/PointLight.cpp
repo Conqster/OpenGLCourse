@@ -1,4 +1,5 @@
 #include "PointLight.h"
+#include "CommonValues.h"
 
 PointLight::PointLight() : Light()
 {
@@ -30,6 +31,12 @@ void PointLight::UseLight(GLuint ambientIntensityLocation, GLuint ambientColourL
 	glUniform1f(linearLocation, linear);
 	glUniform1f(exponentLocation, exponent);
 }
+
+void PointLight::AddVelocity(glm::vec3 rate)
+{
+	position += rate;
+}
+
 
 PointLight::~PointLight()
 {

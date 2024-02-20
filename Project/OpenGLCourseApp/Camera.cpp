@@ -40,6 +40,13 @@ void Camera::keyControl(bool* keys, GLfloat deltaTime)
 	{
 		position += right * velocity;
 	}
+
+#pragma region Play with control 
+
+
+
+#pragma endregion
+
 }
 
 

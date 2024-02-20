@@ -12,7 +12,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "CommonValues.h"
+//#include "CommonValues.h"
 
 #include "Mesh.h"
 #include "Shader.h"
@@ -51,7 +51,7 @@ float xPos = -4.0f;
 float yPos = 2.0f;
 float zPos = 2.0f;
 
-myVector rateOfChange = myVector::ZeroVector();
+Vec3 rateOfChange = Vec3::Zero();
 
 
 #pragma endregion
@@ -173,9 +173,13 @@ void CreateShaders()
 	shaderList.push_back(*shader1);
 }
 
+
+
 int main()
 {
-	mainWindow = Window(1366, 768);// 800, 600 or 1280, 1024 or 1024, 768
+
+	//mainWindow = Window(2560, 1440);// 800, 600 or 1280, 1024 or 1024, 768 or 1366, 768
+	mainWindow = Window(SCREEN_WIDTH, SCREEN_HEIGHT);
 	mainWindow.Initialise();
 	
 
@@ -187,11 +191,11 @@ int main()
 
 
 	brickTexture = Texture("Textures/brick.png");
-	brickTexture.LoadTexture();
+	brickTexture.LoadTexture_Alpha();
 	dirtTexture = Texture("Textures/dirt.png");
-	dirtTexture.LoadTexture();
+	dirtTexture.LoadTexture_Alpha();
 	plainTexture = Texture("Textures/plain64.png");
-	plainTexture.LoadTexture();
+	plainTexture.LoadTexture_Alpha();
 
 	shinyMaterial = Material(4.0f, 256);
 	dullMaterial = Material(0.3f, 4.f);
@@ -202,19 +206,26 @@ int main()
 	/*float xPos = */
 	//myVector rateOfChange = myVector(2.0f, 1.0f, 0.0f);
 	//float xPos = rateOfChange.X;
-	rateOfChange = myVector::VectorOne();
-	std::cout << "My Value is X: " << rateOfChange.X 
-				<<", Y: " << rateOfChange.Y 
-				<<", Z: " << rateOfChange.Z << std::endl;
+	rateOfChange = Vec3::One();
+	std::cout << rateOfChange << std::endl;
 
 #pragma endregion
 
-	
+	Vec3 blackColour = Vec3::One();
+	Vec3 whiteColour = Vec3::Zero();
 	
 
+	//mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
+	//							0.1f, 0.1f,
+	//							0.0f, 0.0f, -1.0f);
+	// 
 	mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
-								0.1f, 0.1f,
+								0.4f, 0.1f,
 								0.0f, 0.0f, -1.0f);
+
+	//mainLight = DirectionalLight(whiteColour.x, whiteColour.y, whiteColour.z,
+	//							0.1f, 0.1f,
+	//							0.0f, 0.0f, -1.0f);
 
 	unsigned int pointLightCount = 0;
 
@@ -282,6 +293,9 @@ int main()
 	//glm::mat4 projection = glm::perspective(45.0f, mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.0f);
 	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (GLfloat)mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.0f);
 
+	float displacment = 5.0f;
+	float curAngle = 20.0f;
+
 	//Loop until window closed
 	while (!mainWindow.getShouldClose())
 	{
@@ -313,6 +327,8 @@ int main()
 
 		spotLights[0].SetFlash(lowerLight, camera.getCameraDirection());
 
+		
+
 
 		shaderList[0].SetDirectionalLight(&mainLight);
 		shaderList[0].SetPointLights(pointLights, pointLightCount);
@@ -327,8 +343,12 @@ int main()
 
 		glm::mat4 model(1.0f);
 
-		model = glm::translate(model, glm::vec3(0.0f, 0.0f, -2.5f));
-		//model = glm::rotate(model, curAngle * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		displacment += (0.1f * deltaTime);
+		curAngle += (20.0f * deltaTime);
+		
+
+		model = glm::translate(model, glm::vec3(displacment, 0.0f, -2.5f));
+		model = glm::rotate(model, curAngle * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
 		//model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		brickTexture.UseTexture();
@@ -346,8 +366,12 @@ int main()
 
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, -2.0f, 0.0f));
+
+		//increase scale
+		model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		dirtTexture.UseTexture();
+		//plainTexture.UseTexture();
 		shinyMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		meshList[2]->RenderMesh();
 
